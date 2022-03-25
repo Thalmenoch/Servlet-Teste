@@ -24,7 +24,12 @@ public class PrimeiroServlet extends HttpServlet {
     
     protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
     	PrintWriter out = response.getWriter();
-    
+    	
+    	out.println("<html>");
+    	out.println("<body>");
+    	out.println("Olá Mundo...");
+    	out.println("</body>");
+    	out.println("</html>");
     	
     }
     

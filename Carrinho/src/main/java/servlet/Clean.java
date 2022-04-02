@@ -2,6 +2,7 @@ package servlet;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Random;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -31,7 +32,7 @@ public class Clean extends HttpServlet {
 		HttpSession session = request.getSession();
 		ArrayList<String> carrinho = (ArrayList<String>) session.getAttribute("carrinho");
 		
-		
+		carrinho.remove(0);
 		
 		//session.removeAttribute("carrinho");
 	}

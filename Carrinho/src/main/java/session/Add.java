@@ -29,9 +29,9 @@ public class Add extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		ArrayList<String> carrinho = new ArrayList();
-		carrinho.add("Camiseta");
-		carrinho.add("Sapato");
-		carrinho.add("Cueca");
+		carrinho.add("Desvio de Dinheiro");
+		carrinho.add("Sonegação de Imposto");
+		carrinho.add("Carrapato");
 		
 		HttpSession session = request.getSession();
 		session.setAttribute("carrinho", carrinho);

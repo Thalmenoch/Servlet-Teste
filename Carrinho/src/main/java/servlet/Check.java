@@ -31,11 +31,11 @@ public class Check extends HttpServlet {
 		// TODO Auto-generated method stub
 		PrintWriter out = response.getWriter();
 		HttpSession session = request.getSession();
+		ArrayList<String> carrinho = (ArrayList<String>) session.getAttribute("carrinho");
 		
-		if(session == null) {
-			out.println("Tá vazio chefe !");
+		if(carrinho == null) {
+			out.println("Tá vazio, chefe !");
 		}else {
-			ArrayList<String> carrinho = (ArrayList<String>) session.getAttribute("carrinho");
 			
 			if(carrinho != null) {
 				for(int i = 0; i < carrinho.size(); i++) {

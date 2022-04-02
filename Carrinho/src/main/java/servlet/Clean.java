@@ -1,6 +1,7 @@
 package servlet;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -28,7 +29,11 @@ public class Clean extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		HttpSession session = request.getSession();
+		ArrayList<String> carrinho = (ArrayList<String>) session.getAttribute("carrinho");
 		
+		
+		
+		//session.removeAttribute("carrinho");
 	}
 
 	/**
